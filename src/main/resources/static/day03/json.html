@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //定义一个json对象-{}
+        //{"key":"value"}
+        let obj1={"id":100,"username":"admin"};
+        //通过json对象名.key来访问json的值
+        console.log(obj1.id);
+        console.log(obj1.username);
+        //定义一个json数组-[]
+        let  arr1=[{"id":1,"username":"csj"},{"id":2,"username":"cc"},{"id":3,"username":"ss"}];
+        //访问数组中第二个元素的username的值
+        //console.log(arr1[1].username)
+
+        //遍历数组
+        for (let i = 0; i < arr1.length; i++) {
+            console.log(arr1[i].username);
+        }
+        let datas = {"code":200,"msg":"查询","data":[{"id":100,"username":"admin"},
+                {"id":200,"username":"jack"}]}
+        console.log(datas.data[1].id);
+
+
+
+
+    </script>
+
+</body>
+</html>

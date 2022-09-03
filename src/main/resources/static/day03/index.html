@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/dev/param/hello?id=100&username=admin">发送参数</a>
+    <button type="button" onclick="send()">按钮</button>
+    <hr>
+    <input type="text" id="uid">
+    <input type="text" id="username">
+    <button type="botton" onclick="test()">按钮2</button>
+    <script>
+        function send() {
+            window.location="/dev/param/hello?id=100&username=admin";
+
+        }
+        function test() {
+            let id=document.getElementById("uid").value;
+            let username=document.getElementById("username").value;
+            window.location="/dev/param/hello?id="+id+"&username="+username;
+
+        }
+    </script>
+
+</body>
+</html>

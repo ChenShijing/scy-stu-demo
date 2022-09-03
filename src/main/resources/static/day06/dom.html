@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-操作dom</title>
+    <style>
+        th,td{
+            width: 150px;
+            height: 30px;
+            border:1px solid #999;
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+        <button type="button" onclick="add_line()">添加⼀⾏</button>
+        <div id="outer">
+            <table>
+                <!-- 定义表头-->
+                <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>邮箱</th>
+                    <th>⽤户名</th>
+                </tr>
+                </thead>
+                <!-- 定义表格的主体内容-->
+                <tbody id="app">
+                </tbody>
+            </table>
+        </div>
+        <script src="../plugins/jquery.min.js"></script>
+        <script>
+            //添加⼀⾏
+            function add_line(){
+                //获取tbody对象 - jquery对象
+                let tbody = $("#app");
+                //定义⼀个字符串来保存添加的内容
+                //使⽤了⼀个模板字符串的写法
+                // let str = "";
+                // str+=" <tr>"
+                // str+=" <td></td>"
+                // str+=" <td></td>"
+                // str+=" <td></td>"
+                // str+="</tr>";
+                let str = `
+         <tr>
+         <td><input type="checkbox"></td>
+         <td></td>
+         <td></td>
+         </tr>
+         `;
+                tbody.append(str);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <li>
+            用户名：<input type="text" name="username">
+        </li>
+        <li>
+             密&nbsp;码&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" name="password">
+        </li>
+        <button type="botton" onclick="task()">判断</button>
+    </form>
+    <script>
+        function task() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            window.location="/dev/judge/exist?username="+username+"&password="+password;
+
+        }
+    </script>
+</body>
+</html>
